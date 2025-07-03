@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Summary | Lecture's Digest</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">🧠 Lecture's Digest</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="upload.html">Upload</a></li>
+      <li><a href="input.html">Text Input</a></li>
+    </ul>
+    <button id="themeBtn" aria-label="Toggle theme" class="theme-toggle">🌞</button>
+  </nav>
+  <main class="summary-main">
+    <div class="summary-header">
+      <button class="upload-btn" onclick="window.location='upload.html'">← Back to Upload</button>
+      <h1 class="upload-title">Comprehensive Analysis Results</h1>
+      <p class="upload-subtitle">Your content has been thoroughly analyzed and summarized</p>
+    </div>
+    <section class="summary-card">
+      <div class="summary-card-header">
+        <div class="summary-card-title">Executive Summary</div>
+        <div class="summary-actions">
+          <button class="summary-action" id="copySummary">📋</button>
+          <button class="summary-action" id="downloadSummary">⬇️</button>
+          <button class="summary-action" id="listenSummary">🔊</button>
+          <button class="summary-action" id="shareSummary">🔗</button>
+        </div>
+      </div>
+      <div class="summary-content" id="summaryText">Loading summary...</div>
+      <div class="summary-keywords" id="keywordsList"></div>
+    </section>
+    <section class="summary-videos">
+      <h2 class="summary-section-title">Related Learning Videos</h2>
+      <div id="youtubeVideos">Loading videos...</div>
+    </section>
+    <section class="summary-details-audio">
+      <div class="summary-details">
+        <h3 class="summary-section-title">Analysis Details</h3>
+        <ul>
+          <li><b>Upload Date:</b> <span id="uploadDate"></span></li>
+          <li><b>Word Count:</b> <span id="wordCount"></span></li>
+          <li><b>Topics Identified:</b> <span id="topicsCount"></span></li>
+        </ul>
+      </div>
+      <div class="summary-audio">
+        <h3 class="summary-section-title">Audio Playback</h3>
+        <button class="upload-btn" id="listenSummary2">🔊 Listen to Summary</button>
+      </div>
+    </section>
+    <div class="summary-next">
+      <h3>Upload Next Document</h3>
+      <button class="upload-btn" onclick="window.location='upload.html'">Upload New</button>
+    </div>
+  </main>
+  <script src="script.js"></script>
+  <script src="summary.js"></script>
+</body>
+</html> 

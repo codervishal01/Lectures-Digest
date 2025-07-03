@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload | Lecture's Digest</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">🧠 Lecture's Digest</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="upload.html" class="active">Upload</a></li>
+      <li><a href="input.html">Text Input</a></li>
+    </ul>
+    <button id="themeBtn" aria-label="Toggle theme" class="theme-toggle">🌞</button>
+  </nav>
+  <main class="upload-main">
+    <h1 class="upload-title">Upload Your Document</h1>
+    <p class="upload-subtitle">Upload files, input text manually, or use voice input to generate comprehensive summaries</p>
+    <div class="upload-tabs">
+      <button class="tab-btn active" id="tab-upload">File Upload</button>
+      <button class="tab-btn" id="tab-manual" onclick="window.location='input.html'">Manual Input</button>
+      <button class="tab-btn" id="tab-voice" disabled>Voice Input</button>
+    </div>
+    <div class="upload-card" id="uploadCard">
+      <div class="upload-icon-anim">
+        <span class="upload-anim-arrow">&#8595;</span>
+      </div>
+      <h2 class="upload-card-title">Upload Your Notes</h2>
+      <p class="upload-card-desc">Drop your PDF or text file here and watch the magic happen!</p>
+      <div class="upload-badges">
+        <span class="badge badge-summary">🧠 Auto-summary</span>
+        <span class="badge badge-keywords">🏷️ Keywords</span>
+        <span class="badge badge-youtube">▶️ YouTube</span>
+        <span class="badge badge-tts">🔊 Text-to-Speech</span>
+        <span class="badge badge-gemini">⚡ Powered by Google Gemini AI</span>
+      </div>
+      <form id="uploadForm" class="upload-form">
+        <label class="upload-btn">
+          <input type="file" id="fileInput" accept=".pdf,.txt" required hidden />
+          <span>📂 Choose File</span>
+        </label>
+        <span id="fileName" class="file-name"></span>
+        <button type="submit" class="upload-btn" style="margin-top:1rem;">Summarize</button>
+      </form>
+      <div class="upload-file-types">PDF, TXT &middot; Max: 10MB</div>
+    </div>
+    <div id="summaryResult" class="summary-result" style="display:none;">
+      <h2>Summary</h2>
+      <p id="summaryText"></p>
+      <h3>Keywords</h3>
+      <ul id="keywordsList"></ul>
+    </div>
+  </main>
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.2.67/pdf.min.js"></script>
+  <script src="upload.js"></script>
+</body>
+</html> 

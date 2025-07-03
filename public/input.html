@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text Input | Lecture's Digest</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">🧠 Lecture's Digest</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="upload.html">Upload</a></li>
+      <li><a href="input.html" class="active">Text Input</a></li>
+    </ul>
+    <button id="themeBtn" aria-label="Toggle theme" class="theme-toggle">🌞</button>
+  </nav>
+  <main class="upload-main">
+    <h1 class="upload-title">Input Your Notes</h1>
+    <p class="upload-subtitle">Paste or type your notes below to generate a comprehensive summary</p>
+    <div class="upload-tabs">
+      <button class="tab-btn" id="tab-upload" onclick="window.location='upload.html'">File Upload</button>
+      <button class="tab-btn active" id="tab-manual">Manual Input</button>
+      <button class="tab-btn" id="tab-voice" disabled>Voice Input</button>
+    </div>
+    <div class="upload-card">
+      <div class="upload-icon-anim">
+        <span class="upload-anim-arrow">&#9998;</span>
+      </div>
+      <h2 class="upload-card-title">Paste or Type Your Notes</h2>
+      <p class="upload-card-desc">Enter your notes and watch the magic happen!</p>
+      <div class="upload-badges">
+        <span class="badge badge-summary">🧠 Auto-summary</span>
+        <span class="badge badge-keywords">🏷️ Keywords</span>
+        <span class="badge badge-youtube">▶️ YouTube</span>
+        <span class="badge badge-tts">🔊 Text-to-Speech</span>
+        <span class="badge badge-gemini">⚡ Powered by Google Gemini AI</span>
+      </div>
+      <form id="inputForm" class="input-form">
+        <textarea id="manualText" placeholder="Paste or type your notes here..." required></textarea>
+        <button type="submit" class="upload-btn">Summarize</button>
+      </form>
+    </div>
+    <div id="summaryResult" class="summary-result" style="display:none;">
+      <h2>Summary</h2>
+      <p id="summaryText"></p>
+      <h3>Keywords</h3>
+      <ul id="keywordsList"></ul>
+    </div>
+  </main>
+  <script src="script.js"></script>
+  <script src="input.js"></script>
+</body>
+</html> 
